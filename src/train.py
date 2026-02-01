@@ -11,7 +11,7 @@ def train(X,y,lr=0.1,epochs=100):
         total_loss=0
         
         for xi,yi in zip(X,y):
-            prob = predict_probability(weights,bias,xi)
+            prob = predict_probability(xi,weights,bias)
             loss = log_loss(yi,prob)
             total_loss+=loss
 
